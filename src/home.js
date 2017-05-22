@@ -1,8 +1,22 @@
 import React from 'react';
 
-var Home = () => <div>
-  <h1>Welcome to React Router Redux</h1>
-  <p>Here we are going to show you how to implement support for routing your Redux!</p>
-</div>
+
+class Home extends React.Component {
+
+  constructor(props) {
+    super(props);
+  }
+
+
+  render() {
+
+    return (
+      <div>
+        <h1>Welcome to React Router Redux</h1>
+        {/*{React.cloneElement(this.prpos.children, this.props)}*/}
+      </div>
+    );
+  }
+}
 
 export default Home;

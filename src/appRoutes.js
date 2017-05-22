@@ -1,11 +1,10 @@
 import React from 'react';
 
-import App from './App';
 import Contact from './contact';
 import Home from './home';
 import Tab from './Tab'
 import Single from './Single'
-import PhotoGrind from './PhotoGrind'
+import PhotoGrid from './PhotoGrid'
 
 
 const mainLinksRoutes = [
@@ -29,10 +28,10 @@ const mainLinksRoutes = [
 
 const tabLinksRoutes = [
   {
-    path: "/contact/Tab",
-    component: Tab,
-    name: "Tab",
-    title:"Titulo"
+    path: "/contact/PhotoGrid",
+    component: PhotoGrid,
+    name: "PhotoGrid",
+    title:"PhotoGrid"
   },
   {
     path: "/contact/Tab",
