@@ -27,10 +27,13 @@ class Tab extends React.Component {
 
   render() {
 
+    // var childrenWithProps = React.cloneElement(this.props, { value: this });
+
     return (
       <div>
         <h1>Tab</h1>
         <p>{this.props.title}</p>
+        {/*<p>CHILD:{childrenWithProps}</p>*/}
         <button onClick={back}>Back</button>
         <button onClick={setPath}>Contact</button>
       </div>

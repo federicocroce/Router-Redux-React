@@ -26,12 +26,7 @@ class NavigationF extends React.Component {
 
         return linksRoutes.map((route, index) => ( 
 
-        //    if(linksRoutes[index].exact){
-        <Route exact={linksRoutes[index].exact} path={linksRoutes[index].path} key={index} component={linksRoutes[index].component} handler="asdasdasd" />
-            //    }
-            //    else{
-            //         return <Route path={linksRoutes[index].path} key={index} component={linksRoutes[index].component} />
-            //    }
+        <Route exact={linksRoutes[index].exact} path={linksRoutes[index].path} key={index} component={linksRoutes[index].component} value="asdasdasd" />
 
         ))
     };

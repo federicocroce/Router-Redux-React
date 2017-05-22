@@ -4,6 +4,8 @@ import App from './App';
 import Contact from './contact';
 import Home from './home';
 import Tab from './Tab'
+import Single from './Single'
+import PhotoGrind from './PhotoGrind'
 
 
 const mainLinksRoutes = [
