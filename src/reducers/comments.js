@@ -1,6 +1,6 @@
 
 function comments(state = [], action){
-    console.error(state, action);
+    // console.error(state, action);
     return state
 }
 

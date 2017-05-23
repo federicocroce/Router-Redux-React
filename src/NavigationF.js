@@ -28,7 +28,7 @@ class NavigationF extends React.Component {
 
         return linksRoutes.map((route, index) => ( 
 
-        <Route exact={linksRoutes[index].exact} path={linksRoutes[index].path} key={index} component={linksRoutes[index].component} value="asdasdasd"> 
+        <Route exact={linksRoutes[index].exact} path={linksRoutes[index].path} key={index} component={linksRoutes[index].component}> 
             
         </Route>
 
@@ -43,7 +43,7 @@ class NavigationF extends React.Component {
         return (
             <div>
                 {this.generateLinks(linksRoutes)}
-
+                {/*{ React.cloneElement(this.props.children, this.props) }*/}
                 <Switch>
                     {this.generateRutes(linksRoutes)}
                     {/*<IndexRoute componenet={PhotoGrid}/>*/}

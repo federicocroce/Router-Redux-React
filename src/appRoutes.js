@@ -2,18 +2,19 @@ import React from 'react';
 
 import Contact from './contact';
 import Home from './home';
+import App from './components/App';
 import Tab from './Tab'
 import Single from './Single'
 import PhotoGrid from './PhotoGrid'
 
 
 const mainLinksRoutes = [
-  {
-    path: "/",
-    component: Home,
-    name: "Principal",
-    exact: true
-  },
+  // {
+  //   path: "/",
+  //   component: App,
+  //   name: "Principal",
+  //   exact: true
+  // },
   {
     path: "/contact",
     component: Contact,

@@ -9,40 +9,28 @@ import { Route, Router, Link, Switch, IndexRoute } from 'react-router-dom';
 import { store, history } from './Store.js'
 
 import { mainLinksRoutes as linksRoutes } from './appRoutes.js'
+import NavigationF from './NavigationF';
 
 // import App from './App';
 import Contact from './contact';
 
 
 import Tab from './Tab';
-import NavigationF from './NavigationF';
 
-import Main from './Main';
+
+// import Main from './Main';
+import App from './components/App';
 import Single from './Single';
 import PhotoGrid from './PhotoGrid';
-
-/*
-
-const router = (
-  <Router history={history}>
-    <Route path="/" component={Main}>
-      <IndexRoute component={PhotoGrid}></IndexRoute>
-      <Route path="/view/:postId" component={Single}></Route>
-    </Route>
-  </Router>
-)
-
-ReactDOM.render(router, document.getElementById('root'));*/
-
 
 
 ReactDOM.render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <div>
-        <h1>Algo</h1>
-        <NavigationF linksRoutes={linksRoutes}/>
-      </div>
+      <Route exact path="/" component={App}>
+        <Route component={PhotoGrid}></Route>
+        <Route path="/view" component={Single}></Route>
+      </Route>
     </ConnectedRouter>
   </Provider>,
   document.getElementById('root')
