@@ -13,7 +13,6 @@ class Home extends React.Component {
     return (
       <div>
         <h1>Welcome to React Router Redux</h1>
-        {/*{React.cloneElement(this.prpos.children, this.props)}*/}
       </div>
     );
   }

@@ -7,6 +7,7 @@ import NavigationF from '../NavigationF';
 
 import Single from '../Single';
 import PhotoGrid from '../PhotoGrid';
+import Photo from '../Photo';
 
 class Main extends React.Component {
 
@@ -14,22 +15,22 @@ class Main extends React.Component {
     super(props);
   }
 
-  
-
 
   render() {
 
     return (
-      
+
       <div>
         <h1>
           <Link to="/">Welcome to React Router Redux</Link>
         </h1>
-        {this.props.posts.map(function(object) {
-        return (
-          <p key={object.id} data={object} />
-        );
-      })}
+
+        {/*<NavigationF linksRoutes={linksRoutes} />*/}
+
+        {this.props.posts.map((object, index) =>
+          <Photo key={index} index={index} object={object} />
+        )}
+
         {/*<p>PROPS{this.props.posts}</p>*/}
         {/*{React.cloneElement(this.props.children, {globalState: this.state})}*/}
         {/*{React.cloneElement(this.props.children, this.props)}*/}

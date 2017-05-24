@@ -3,7 +3,7 @@
 
 function posts(state = [], action){
     // console.error("El post cambio");
-    console.error(state, action);
+    // console.error(state, action);
     return state
 }
 

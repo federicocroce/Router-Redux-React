@@ -9,12 +9,12 @@ import PhotoGrid from './PhotoGrid'
 
 
 const mainLinksRoutes = [
-  // {
-  //   path: "/",
-  //   component: App,
-  //   name: "Principal",
-  //   exact: true
-  // },
+  {
+    path: "/",
+    component: App,
+    name: "Principal",
+    exact: true
+  },
   {
     path: "/contact",
     component: Contact,

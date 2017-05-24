@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from "react-dom";
+import './App.css';
 
 import { Provider } from "react-redux";
 import { ConnectedRouter, routerReducer, routerMiddleware } from "react-router-redux";
@@ -20,6 +21,7 @@ import Tab from './Tab';
 
 // import Main from './Main';
 import App from './components/App';
+import home from './home';
 import Single from './Single';
 import PhotoGrid from './PhotoGrid';
 
@@ -27,10 +29,13 @@ import PhotoGrid from './PhotoGrid';
 ReactDOM.render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <Route exact path="/" component={App}>
-        <Route component={PhotoGrid}></Route>
-        <Route path="/view" component={Single}></Route>
-      </Route>
+      {/*<Route path="/" component={App}>*/}
+        {/*<NavigationF linksRoutes={linksRoutes} />*/}
+        {/*<Route path="/home" component={App}></Route>*/}
+      {/*</Route>*/}
+
+      <NavigationF linksRoutes={linksRoutes} />
+
     </ConnectedRouter>
   </Provider>,
   document.getElementById('root')

@@ -42,3 +42,7 @@ nav ul li {
   display: block;
 
 }
+
+
+.main-obj{width: 100px; height: 100px; color: red; background: blue; display: inline-block; margin: 20px;
+}
