@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, Route, Switch} from 'react-router-dom';
 
-import Contact from './contact';
+import Owner from './Owner';
 
 
 class PHOTO extends React.Component {
@@ -17,11 +17,11 @@ class PHOTO extends React.Component {
     return (
       <div className="main-obj">
         {/*<Link to={`/view/${props.object}`}>*/}
-        <Link replace="true" to={'/contact/view'}>
+        <Link to={'/owner/view'}>
           <p>{props.object.likes}</p>
         </Link>
         {/*<Switch>*/}
-          <Route path="/contact/view" component={Contact}></Route>
+          <Route path="/owner/view" component={Owner}></Route>
         {/*</Switch>*/}
 
       </div>

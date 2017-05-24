@@ -2,6 +2,9 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import * as actionsCreators from '../actions/actionsCreator';
 import Main from './Main';
+import Owner from '../Owner';
+import Home from '../home';
+
 
 function mapStateProps(state){
     return{

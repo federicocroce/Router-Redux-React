@@ -18,6 +18,10 @@ class Main extends React.Component {
 
   render() {
 
+    // const allProps = 
+
+    
+
     return (
 
       <div>
@@ -25,11 +29,18 @@ class Main extends React.Component {
           <Link to="/">Welcome to React Router Redux</Link>
         </h1>
 
-        {/*<NavigationF linksRoutes={linksRoutes} />*/}
+        {/*<p> {JSON.stringify(this.props)} </p>*/}
 
-        {this.props.posts.map((object, index) =>
+
+        <NavigationF linksRoutes={linksRoutes} data={this.props} />
+
+        {/*{this.props.posts.map((object, index) =>
+
           <Photo key={index} index={index} object={object} />
-        )}
+
+        )}*/}
+
+        {/*<Photo key={index} index={index} object={object} />*/}
 
         {/*<p>PROPS{this.props.posts}</p>*/}
         {/*{React.cloneElement(this.props.children, {globalState: this.state})}*/}

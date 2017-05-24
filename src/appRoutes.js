@@ -1,6 +1,8 @@
 import React from 'react';
 
-import Contact from './contact';
+import Owner from './Owner';
+import Main from './components/Main';
+import Agency from './Agency';
 import Home from './home';
 import App from './components/App';
 import Tab from './Tab'
@@ -9,39 +11,39 @@ import PhotoGrid from './PhotoGrid'
 
 
 const mainLinksRoutes = [
+  // {
+  //   path: "/",
+  //   component: Home,
+  //   name: "",
+  //   exact: true
+  // },
   {
-    path: "/",
-    component: App,
-    name: "Principal",
-    exact: true
+    path: "/owner",
+    component: Owner,
+    name: "Dueño directo"
   },
   {
-    path: "/contact",
-    component: Contact,
-    name: "Contacto"
-  },
-  {
-    path: "/TAB",
-    component: Contact,
-    name: "TAB"
+    path: "/agency",
+    component: Agency,
+    name: "Inmobiliaria"
   }
 ];
 
 const tabLinksRoutes = [
   {
-    path: "/contact/PhotoGrid",
+    path: "/owner/PhotoGrid",
     component: PhotoGrid,
     name: "PhotoGrid",
     title:"PhotoGrid"
   },
   {
-    path: "/contact/Tab",
+    path: "/owner/Tab",
     component: Tab,
     name: "Tab",
     title:"Titulo"
   },
   {
-    path: "/contact/Tab",
+    path: "/owner/Tab",
     component: Tab,
     name: "Tab",
     title:"Titulo"

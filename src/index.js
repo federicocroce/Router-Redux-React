@@ -13,7 +13,7 @@ import { mainLinksRoutes as linksRoutes } from './appRoutes.js'
 import NavigationF from './NavigationF';
 
 // import App from './App';
-import Contact from './contact';
+// import Contact from './contact';
 
 
 import Tab from './Tab';
@@ -29,12 +29,12 @@ import PhotoGrid from './PhotoGrid';
 ReactDOM.render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      {/*<Route path="/" component={App}>*/}
+      <Route path="/" component={App}>
         {/*<NavigationF linksRoutes={linksRoutes} />*/}
-        {/*<Route path="/home" component={App}></Route>*/}
-      {/*</Route>*/}
+        {/*<Route path="/home" component={home}></Route>*/}
+      </Route>
 
-      <NavigationF linksRoutes={linksRoutes} />
+      {/*<NavigationF linksRoutes={linksRoutes} />*/}
 
     </ConnectedRouter>
   </Provider>,

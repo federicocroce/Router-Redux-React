@@ -13,7 +13,7 @@ const back = () => {
 }
 
 const setPath = () => {
-  store.dispatch(push('/contact'));
+  store.dispatch(push('/owner'));
 }
 
 class Tab extends React.Component {

@@ -19,16 +19,16 @@ class NavigationF extends React.Component {
 
     generateLinks = (linksRoutes) => {
         return linksRoutes.map((route, index) => (
-            <Link key={index} to={linksRoutes[index].path} > {linksRoutes[index].name}{index +1} </Link>
+            <Link key={index} to={linksRoutes[index].path} ><p> {linksRoutes[index].name}</p></Link>
         ))
     };
 
-    generateRutes = (linksRoutes) => {
-        // console.error(linksRoutes);
+    generateRutes = (linksRoutes, data) => {
+        // console.error(data);
 
         return linksRoutes.map((route, index) => ( 
 
-        <Route exact={linksRoutes[index].exact} path={linksRoutes[index].path} key={index} component={linksRoutes[index].component}> 
+        <Route exact={linksRoutes[index].exact} path={linksRoutes[index].path} key={index} component={linksRoutes[index].component} data={data}> 
             
         </Route>
 
@@ -40,12 +40,16 @@ class NavigationF extends React.Component {
 
         const linksRoutes = this.props.linksRoutes;
 
+        const data = this.props.data;
+
+        // console.error(data);
+
         return (
             <div>
                 {this.generateLinks(linksRoutes)}
                 {/*{ React.cloneElement(this.props.children, this.props) }*/}
                 <Switch>
-                    {this.generateRutes(linksRoutes)}
+                    {this.generateRutes(linksRoutes, data)}
                     {/*<IndexRoute componenet={PhotoGrid}/>*/}
                 </Switch>
             </div>
