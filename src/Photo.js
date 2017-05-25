@@ -1,10 +1,27 @@
 import React from 'react';
 import { Link, Route, Switch} from 'react-router-dom';
 
-import Owner from './Owner';
+import Single from './Single';
+
+// import {
+//   push,
+//   replace,
+//   go,
+//   goBack,
+//   goForward,
+// } from 'react-router-redux';
+
+// const back = () => {
+//   store.dispatch(goBack());
+// }
+
+// const setPath = () => {
+//   store.dispatch(push('/view'));
+// }
 
 
-class PHOTO extends React.Component {
+
+class Photo extends React.Component {
 
   constructor(props) {
     super(props);
@@ -17,11 +34,11 @@ class PHOTO extends React.Component {
     return (
       <div className="main-obj">
         {/*<Link to={`/view/${props.object}`}>*/}
-        <Link to={'/owner/view'}>
+        <Link to={'/view'}>
           <p>{props.object.likes}</p>
         </Link>
         {/*<Switch>*/}
-          <Route path="/owner/view" component={Owner}></Route>
+          <Route path="/view" component={Single} data={props.object}></Route>
         {/*</Switch>*/}
 
       </div>
@@ -29,4 +46,4 @@ class PHOTO extends React.Component {
   }
 }
 
-export default PHOTO;
+export default Photo;

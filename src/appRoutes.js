@@ -2,12 +2,15 @@ import React from 'react';
 
 import Owner from './Owner';
 import Main from './components/Main';
+import OwnerConnect from './components/App';
 import Agency from './Agency';
 import Home from './home';
 import App from './components/App';
 import Tab from './Tab'
 import Single from './Single'
 import PhotoGrid from './PhotoGrid'
+
+
 
 
 const mainLinksRoutes = [
@@ -19,13 +22,18 @@ const mainLinksRoutes = [
   // },
   {
     path: "/owner",
-    component: Owner,
+    component: OwnerConnect,
     name: "Dueño directo"
   },
   {
     path: "/agency",
     component: Agency,
     name: "Inmobiliaria"
+  },
+  {
+    path: "/view",
+    component: Single,
+    name: ""
   }
 ];
 

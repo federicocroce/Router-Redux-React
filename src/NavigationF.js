@@ -26,13 +26,22 @@ class NavigationF extends React.Component {
     generateRutes = (linksRoutes, data) => {
         // console.error(data);
 
-        return linksRoutes.map((route, index) => ( 
+       
 
-        <Route exact={linksRoutes[index].exact} path={linksRoutes[index].path} key={index} component={linksRoutes[index].component} data={data}> 
-            
-        </Route>
+        return linksRoutes.map((route, index) => {
+            // console.error(linksRoutes[index].component);
+            // if (linksRoutes[index].component == undefined) {
+            //     // console.error("UNDEF");
+            //   return  <Route exact={linksRoutes[index].exact} path={linksRoutes[index].path} key={index} data={data}></Route>
+            // }
+            // else {
+                // console.error("UNDEF");
+              return <Route exact={linksRoutes[index].exact} path={linksRoutes[index].path} key={index} component={linksRoutes[index].component} data={data}></Route>
+            // }
 
-        ))
+
+
+        })
     };
 
 
@@ -48,10 +57,10 @@ class NavigationF extends React.Component {
             <div>
                 {this.generateLinks(linksRoutes)}
                 {/*{ React.cloneElement(this.props.children, this.props) }*/}
-                <Switch>
-                    {this.generateRutes(linksRoutes, data)}
-                    {/*<IndexRoute componenet={PhotoGrid}/>*/}
-                </Switch>
+                {/*<Switch>*/}
+                {this.generateRutes(linksRoutes, data)}
+                {/*<IndexRoute componenet={PhotoGrid}/>*/}
+                {/*</Switch>*/}
             </div>
         );
     }

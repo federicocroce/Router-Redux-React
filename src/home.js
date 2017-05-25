@@ -17,10 +17,19 @@ class Home extends React.Component {
 
     return (
       <div>
-        <h1>Welcome to React Router Redux asdasd</h1>
+        <h1>
+          <Link to="/">Compra/Venta/Alquier Inmuebles</Link>
+        </h1>
 
-        asd
-        {/*<NavigationF linksRoutes={linksRoutes} />*/}
+        {/*{this.props.children.map((object, index) =>
+          <p key={index}> {JSON.stringify(object)} </p>
+        )}*/}
+
+        {/*{React.cloneElement(this.props.children, this.props)}
+
+        React.Children.map(this.props.children,
+    (child) => React.cloneElement(child, {this.props})*/}
+        <NavigationF linksRoutes={linksRoutes} />
       </div>
     );
   }

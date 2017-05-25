@@ -7,6 +7,7 @@ import NavigationF from './NavigationF';
 
 import Photo from './Photo';
 
+
 class Owner extends React.Component {
 
   constructor(props) {
@@ -22,12 +23,14 @@ class Owner extends React.Component {
 
         <h1>Dueño directo</h1>
 
-        <p> {JSON.stringify(this.props)} </p>
 
 
-        {/*{this.props.data.posts.map((object, index) =>
+        {/*<p> {JSON.stringify(this.props)} </p>*/}
+
+
+        {this.props.posts.map((object, index) =>
           <Photo key={index} index={index} object={object} />
-        )}*/}
+        )}
 
 
       </div>

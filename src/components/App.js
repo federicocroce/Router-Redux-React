@@ -17,6 +17,10 @@ function mapDispachToProps(dispatch){
     return bindActionCreators(actionsCreators, dispatch);
 }
 
-const App = connect(mapStateProps, mapDispachToProps)(Main);
+const OwnerConnect = connect(mapStateProps, mapDispachToProps)(Owner);
 
-export default App;
+// export {
+//     OwnerConnect
+// }
+
+export default OwnerConnect;
