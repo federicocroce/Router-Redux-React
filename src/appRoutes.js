@@ -2,7 +2,7 @@ import React from 'react';
 
 import Owner from './Owner';
 import Main from './components/Main';
-import OwnerConnect from './components/App';
+import {OwnerConnect, SingleConnect} from './components/App';
 import Agency from './Agency';
 import Home from './home';
 import App from './components/App';

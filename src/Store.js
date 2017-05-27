@@ -11,9 +11,14 @@ import  registerReducer from "./reducers/index";
 import {comments, posts} from "./Data/data"
 
 const defaultStore = {
-    posts,
+    posts:{
+        allPosts: posts,
+        currentPost: {}
+    },
     comments
 }
+
+// console.error(defaultStore);
 
 const history = createHistory();
 const middleware = routerMiddleware(history);

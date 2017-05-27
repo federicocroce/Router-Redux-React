@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Link, Switch, IndexRoute } from 'react-router-dom';
+import { Route, NavLink, Switch, IndexRoute } from 'react-router-dom';
 
 // import PhotoGrid from './PhotoGrid'
 
@@ -19,7 +19,7 @@ class NavigationF extends React.Component {
 
     generateLinks = (linksRoutes) => {
         return linksRoutes.map((route, index) => (
-            <Link key={index} to={linksRoutes[index].path} ><p> {linksRoutes[index].name}</p></Link>
+            <NavLink  key={index} to={linksRoutes[index].path} ><p> {linksRoutes[index].name}</p></NavLink>
         ))
     };
 

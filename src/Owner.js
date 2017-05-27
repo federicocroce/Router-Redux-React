@@ -28,7 +28,7 @@ class Owner extends React.Component {
         {/*<p> {JSON.stringify(this.props)} </p>*/}
 
 
-        {this.props.posts.map((object, index) =>
+        {this.props.posts.allPosts.map((object, index) =>
           <Photo key={index} index={index} object={object} />
         )}
 

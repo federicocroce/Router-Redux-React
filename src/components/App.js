@@ -9,7 +9,8 @@ import Home from '../home';
 function mapStateProps(state){
     return{
         posts:state.posts,
-        comments:state.comments
+        comments:state.comments,
+        currentPost:{}
     }
 }
 
@@ -23,4 +24,4 @@ const OwnerConnect = connect(mapStateProps, mapDispachToProps)(Owner);
 //     OwnerConnect
 // }
 
-export default OwnerConnect;
+export {OwnerConnect};

@@ -6,6 +6,23 @@ export function increment(index){
     }
 }
 
+// View Post Detail
+// export function viewPost(post){
+//     return{
+//         type:'VIEW_POST',
+//         post
+//     }
+// }
+
+const viewPost = (allPosts, post) =>{
+    return{
+        type:'VIEW_POST',
+        allPosts, 
+        post
+    }
+}
+
+
 
 
 //add Ccmment
@@ -28,3 +45,6 @@ export function removeComment(postId, i){
         i
     }
 }
+
+
+export {viewPost};

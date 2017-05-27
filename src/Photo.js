@@ -1,7 +1,9 @@
 import React from 'react';
-import { Link, Route, Switch} from 'react-router-dom';
+import { NavLink, Route, Switch } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 import Single from './Single';
+import { viewPost } from './actions/actionsCreator';
 
 // import {
 //   push,
@@ -20,30 +22,51 @@ import Single from './Single';
 // }
 
 
+const Photo = (props) => {
 
-class Photo extends React.Component {
+  // const post = 
+  console.error(props);
+  return (
+    <div className="main-obj">
+      {/*<Link to={`/view/${props.object}`}>*/}
+      <NavLink to={'/view'}>
+        <p>{props.object.likes}</p>
+      </NavLink>
+      {/*<Switch>*/}
+      <Route path="/view" component={Single}></Route>
+      {/*</Switch>*/}
 
-  constructor(props) {
-    super(props);
-  }
+
+      <button onClick={() => props.viewPost(props.posts.allPosts, props.object)}> VIEW</button>
+
+    </div>
+  );
+}
 
 
-  render() {
-    const props = this.props;
-    // console.error(props);
-    return (
-      <div className="main-obj">
-        {/*<Link to={`/view/${props.object}`}>*/}
-        <Link to={'/view'}>
-          <p>{props.object.likes}</p>
-        </Link>
-        {/*<Switch>*/}
-          <Route path="/view" component={Single} data={props.object}></Route>
-        {/*</Switch>*/}
-
-      </div>
-    );
+const mapStateProps = state => {
+  // console.error(state);
+  return {
+    posts: {
+      allPosts: state.posts.allPosts,
+      currentPost: state.posts.currentPost
+    }
   }
 }
 
-export default Photo;
+const mapDispatchToProps = dispatch => {
+  return {
+    viewPost(allPosts, post) {
+      dispatch(viewPost(allPosts, post));
+    }
+  };
+}
+
+
+export default connect(mapStateProps, mapDispatchToProps)(Photo);
+
+
+
+// <button onClick={store.dispatch(viewPost)}> VIEW</button>
+
+// export default Photo;
