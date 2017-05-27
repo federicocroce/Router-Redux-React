@@ -1,36 +1,10 @@
-import React from 'react';
-import { createStore, applyMiddleware, combineReducers } from "redux";
-import { push, replace, go, goBack, goForward,} from 'react-router-redux';
+import {counterReducer} from './reducer';
+import { createStore} from "redux";
 
-import thunk from "redux-thunk";
-import {routerReducer, routerMiddleware } from "react-router-redux";
-import { composeWithDevTools } from 'redux-devtools-extension';
-import createHistory from 'history/createBrowserHistory';
+// const data = {
+//     posts
+// }
 
-import  registerReducer from "./reducers/index";
-import {comments, posts} from "./Data/data"
+const store = createStore(counterReducer);
 
-const defaultStore = {
-    posts:{
-        allPosts: posts,
-        currentPost: {}
-    },
-    comments
-}
-
-// console.error(defaultStore);
-
-const history = createHistory();
-const middleware = routerMiddleware(history);
-
-
-// const reducers = combineReducers({ ...registerReducer, router: routerReducer });
-// const store = createStore(reducers, defaultStore);
-const store = createStore(registerReducer, defaultStore, applyMiddleware(middleware));
-
-
-export {
-    store,
-    history
-}
-
+export default store;

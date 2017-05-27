@@ -1,43 +1,30 @@
 import React from 'react';
 import ReactDOM from "react-dom";
-import './App.css';
 
-import { Provider } from "react-redux";
+import { Provider, connect } from "react-redux";
 import { ConnectedRouter, routerReducer, routerMiddleware } from "react-router-redux";
 import { createStore, applyMiddleware, combineReducers } from "redux";
 import { Route, Router, Link, Switch, IndexRoute } from 'react-router-dom';
 
-import { store, history } from './Store.js'
+import Counter from './counter';
+import store from './store';
 
-import { mainLinksRoutes as linksRoutes } from './appRoutes.js'
-import NavigationF from './NavigationF';
-
-// import App from './App';
-// import Contact from './contact';
-
-
-import Tab from './Tab';
+/*
+* Reducer: Acá es donde el estado cambia, previamente 
+* se debe hacer un dispatch de una acción
+*/
 
 
-// import Main from './Main';
-import App from './components/App';
-import home from './home';
-import Single from './Single';
-import PhotoGrid from './PhotoGrid';
+
+/*
+* Creo el store principal de la aplicación
+*/
+// import { createStore } from 'Redux';
 
 
 ReactDOM.render(
   <Provider store={store}>
-    <ConnectedRouter history={history}>
-      <Route path="/" component={home}>
-        <IndexRoute component={PhotoGrid}></IndexRoute>
-        <Route path="/view" component={Single}></Route>
-      </Route>
-
-      {/*<NavigationF linksRoutes={linksRoutes} />*/}
-
-    </ConnectedRouter>
+    <Counter />
   </Provider>,
   document.getElementById('root')
 );
-
