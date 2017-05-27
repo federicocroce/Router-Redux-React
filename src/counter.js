@@ -33,8 +33,8 @@ const Counter = (props) => {
 const mapStateToProps = (state) => {
     // console.log(state);
     return {
-        value: state.value,
-        posts: state.posts
+        value: state
+        // posts: state.posts
     };
 }
 

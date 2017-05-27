@@ -15,8 +15,8 @@ import { Route, Router, Link, Switch, IndexRoute } from 'react-router-dom';
 
 
 const Contact = (props) => {
-    // console.log("Counter");
-    // console.log(props);
+    console.log("Contact");
+    console.log(props);
     return (
         <div>
             <h1>{props.value}</h1>
@@ -33,7 +33,6 @@ const Contact = (props) => {
 const mapStateToProps = (state) => {
     // console.log(state);
     return {
-        // value: state.value,
         posts: state.posts
     };
 }

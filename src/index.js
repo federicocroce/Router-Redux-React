@@ -7,7 +7,8 @@ import { createStore, applyMiddleware, combineReducers } from "redux";
 import { Route, Router, Link, Switch, IndexRoute } from 'react-router-dom';
 
 import Counter from './counter';
-import store from './store';
+import Contact from './contact';
+import {store} from './store';
 
 /*
 * Reducer: Acá es donde el estado cambia, previamente 
@@ -24,7 +25,10 @@ import store from './store';
 
 ReactDOM.render(
   <Provider store={store}>
-    <Counter />
+    <div>
+      <Counter />
+      <Contact />
+    </div>
   </Provider>,
   document.getElementById('root')
 );
