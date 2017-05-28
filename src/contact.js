@@ -1,10 +1,8 @@
 import React from 'react';
-import ReactDOM from "react-dom";
 
-import { Provider, connect } from "react-redux";
-import { ConnectedRouter, routerReducer, routerMiddleware } from "react-router-redux";
-import { createStore, applyMiddleware, combineReducers } from "redux";
-import { Route, Router, Link, Switch, IndexRoute } from 'react-router-dom';
+import { connect } from "react-redux";
+
+// import { Route, Router, Link, Switch, IndexRoute } from 'react-router-dom';
 
 
 
@@ -15,13 +13,17 @@ import { Route, Router, Link, Switch, IndexRoute } from 'react-router-dom';
 
 
 const Contact = (props) => {
-    console.log("Contact");
-    console.log(props);
+
+    // console.log(props);
     return (
         <div>
             <h1>{props.value}</h1>
             <button onClick={props.onIncrement}>+</button>
             <button onClick={props.onDecrement}>-</button>
+            {props.posts.allPosts.map((object, index) =>
+                <p key={index} data={object}> {JSON.stringify(object)} </p>
+            )}
+
         </div>
     );
 
@@ -31,7 +33,7 @@ const Contact = (props) => {
 * Si se especifica, el componente a suscribirse a las actualizaciones del store de Redux.
 */
 const mapStateToProps = (state) => {
-    // console.log(state);
+    console.log(state);
     return {
         posts: state.posts
     };

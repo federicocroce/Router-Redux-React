@@ -1,10 +1,12 @@
-import { comments, posts } from "./Data/data";
+import { postsResponse } from "./Data/data";
 import { combineReducers } from 'redux';
 import { routerReducer } from "react-router-redux";
 
+// console.log(posts);
+
 
 const postsData = {
-    allPosts: posts,
+    allPosts: postsResponse,
     currentPost: {}
 }
 
@@ -19,7 +21,7 @@ const postsData = {
 
 
 
-const counterReducer = (state = 0, action) => {
+const counter = (state = 5, action) => {
     // console.log("REDUC");
     // console.log(state);
     //     console.log(action);
@@ -36,7 +38,7 @@ const counterReducer = (state = 0, action) => {
 }
 
 
-const postReducer = (state = postsData, action) => {
+const posts = (state = postsData, action) => {
     // console.log("REDUC");
     // console.log(state);
     //     console.log(action);
@@ -75,9 +77,8 @@ const postReducer = (state = postsData, action) => {
 
 
 const allReducers = {
-    // currentPost,
-    counterReducer,
-    postReducer,
+    counter,
+    posts,
     routing: routerReducer
 }
 
@@ -85,4 +86,4 @@ const rootReducer = combineReducers(allReducers)
 
 export default rootReducer;
 
-// export default counterReducer;
+// export default postReducer;

@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from "react-dom";
 
-import { Provider, connect } from "react-redux";
-import { ConnectedRouter, routerReducer, routerMiddleware } from "react-router-redux";
-import { createStore, applyMiddleware, combineReducers } from "redux";
-import { Route, Router, Link, Switch, IndexRoute } from 'react-router-dom';
+import { Provider } from "react-redux";
+import { ConnectedRouter} from "react-router-redux";
+// import { createStore, applyMiddleware, combineReducers } from "redux";
+// import { Route, Router, Link, Switch, IndexRoute } from 'react-router-dom';
 
 import Counter from './counter';
 import Contact from './contact';
-import {store} from './store';
+import { store, history } from './Store.js'
 
 /*
 * Reducer: Acá es donde el estado cambia, previamente 
@@ -25,10 +25,12 @@ import {store} from './store';
 
 ReactDOM.render(
   <Provider store={store}>
-    <div>
-      <Counter />
-      <Contact />
-    </div>
+      <ConnectedRouter history={history}>
+      <div>
+        <Counter/>
+        <Contact/>
+        </div>
+      </ConnectedRouter>
   </Provider>,
   document.getElementById('root')
 );

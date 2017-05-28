@@ -1,22 +1,11 @@
 import React from 'react';
-import ReactDOM from "react-dom";
 
-import { Provider, connect } from "react-redux";
-import { ConnectedRouter, routerReducer, routerMiddleware } from "react-router-redux";
-import { createStore, applyMiddleware, combineReducers } from "redux";
-import { Route, Router, Link, Switch, IndexRoute } from 'react-router-dom';
-
-
-
-/*
-* Componente: Un simple comente React <img draggable="false" class="emoji" alt="🙂" src="https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/svg/1f642.svg">
-*/
+import { connect } from "react-redux";
 
 
 
 const Counter = (props) => {
-    // console.log("Counter");
-    // console.log(props);
+
     return (
         <div>
             <h1>{props.value}</h1>
@@ -33,7 +22,7 @@ const Counter = (props) => {
 const mapStateToProps = (state) => {
     // console.log(state);
     return {
-        value: state
+        value: state.counter
         // posts: state.posts
     };
 }
@@ -44,13 +33,13 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         onIncrement: () => {
-            console.log("SUMA");
+            // console.log("SUMA");
             dispatch({
                 type: 'INCREMENT'
             })
         },
         onDecrement: () => {
-            console.log("RESTA");
+            // console.log("RESTA");
             dispatch({
                 type: 'DECREMENT'
             })
