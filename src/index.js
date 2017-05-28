@@ -30,8 +30,6 @@ ReactDOM.render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
       <Route path="/" component={home}>
-        <IndexRoute component={PhotoGrid}></IndexRoute>
-        <Route path="/view" component={Single}></Route>
       </Route>
 
       {/*<NavigationF linksRoutes={linksRoutes} />*/}

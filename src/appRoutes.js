@@ -22,7 +22,7 @@ const mainLinksRoutes = [
   // },
   {
     path: "/owner",
-    component: OwnerConnect,
+    component: Owner,
     name: "Dueño directo"
   },
   {

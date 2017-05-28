@@ -1,7 +1,15 @@
 // a reducer takes in two things
 import { store } from '../Store.js'
+import { postsResponse } from "../Data/data";
 
-function currentPost(state = {}, action) {
+
+const postsData = {
+    allPosts: postsResponse,
+    currentPost: {}
+}
+
+
+const posts = (state = postsData, action) => {
     // console.error("El post cambio");
     // console.error(action);
     switch (action.type) {
@@ -20,22 +28,4 @@ function currentPost(state = {}, action) {
     return state;
 }
 
-// function post(state = [], action) {
-//     // console.error("El post cambio");
-//     // console.error(action);
-//     // switch (action.type) {
-//     //     case 'VIEW_POST':
-//     //         console.error(state);
-//     //         return action.id;
-//     //         // return state.post.filter(product => product.id == action.post.id)
-//     //         break;
-//     //     default:
-//     //         return state
-//     // }
-
-//     return state;
-// }
-
-
-
-export default currentPost;
+export default posts;

@@ -1,4 +1,4 @@
-const posts = [
+const postsResponse = [
     {
         "code": "1",
         "caption": "Fede 1",
@@ -35,5 +35,5 @@ const comments = {
 
 export {
     comments,
-    posts
+    postsResponse
 }
