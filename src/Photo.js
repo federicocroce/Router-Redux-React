@@ -90,8 +90,9 @@ const Photo = (props) => {
     <div className="main-obj" >
       {/*<Link to={`/view/${props.object}`}>*/}
       <NavLink to={'/view'} onClick={() => props.viewPost(props.object)}>
-        <p>{props.object.likes}</p>
+        <p>{props.object.likes}</p>        
       </NavLink>
+      <p>{props.object.type}</p>
       {/*<Switch>*/}
       {/*<Route path="/view" component={Single} ></Route>*/}
       {/*</Switch>*/}

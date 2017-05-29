@@ -36,7 +36,7 @@ class NavigationF extends React.Component {
             // }
             // else {
                 // console.error("UNDEF");
-              return <Route exact={linksRoutes[index].exact} path={linksRoutes[index].path} key={index} component={linksRoutes[index].component} data={data}></Route>
+              return <Route exact={linksRoutes[index].exact} path={linksRoutes[index].path} key={index} component={linksRoutes[index].component} title="Fedeeee" data={data}></Route>
             // }
 
 

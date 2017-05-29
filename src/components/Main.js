@@ -6,7 +6,7 @@ import { mainLinksRoutes as linksRoutes } from '../appRoutes.js'
 import NavigationF from '../NavigationF';
 
 import Single from '../Single';
-import PhotoGrid from '../PhotoGrid';
+// import PhotoGrid from '../PhotoGrid';
 import Photo from '../Photo';
 
 class Main extends React.Component {

@@ -23,16 +23,16 @@ import Tab from './Tab';
 import App from './components/App';
 import home from './home';
 import Single from './Single';
-import PhotoGrid from './PhotoGrid';
+// import PhotoGrid from './PhotoGrid';
 
 
 ReactDOM.render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <Route path="/" component={home}>
-      </Route>
-
-      {/*<NavigationF linksRoutes={linksRoutes} />*/}
+      <div>
+        <Route path="/" component={home}></Route>
+        {/*<NavigationF linksRoutes={linksRoutes} />*/}
+      </div>
 
     </ConnectedRouter>
   </Provider>,

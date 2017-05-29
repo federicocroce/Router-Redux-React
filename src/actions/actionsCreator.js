@@ -21,6 +21,15 @@ const viewPost = (currentPost) =>{
     }
 }
 
+const filterPosts = (posts, action) =>{
+    // console.error(action);
+    return{
+        type: action,
+        posts
+    }
+}
+
+
 
 
 
@@ -46,4 +55,4 @@ export function removeComment(postId, i){
 }
 
 
-export {viewPost};
+export {viewPost, filterPosts};

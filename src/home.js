@@ -5,6 +5,9 @@ import App from './components/App';
 
 import { mainLinksRoutes as linksRoutes } from './appRoutes.js'
 import NavigationF from './NavigationF';
+import postsGrid from './postsGrid';
+
+import Owner from './Owner';
 
 class Home extends React.Component {
 
@@ -18,7 +21,7 @@ class Home extends React.Component {
     return (
       <div>
         <h1>
-          <Link to="/">Compra/Venta/Alquier Inmuebles</Link>
+          <Link to="/">Venta/Alquier Inmuebles</Link>
         </h1>
 
         {/*{this.props.children.map((object, index) =>
@@ -30,6 +33,7 @@ class Home extends React.Component {
         React.Children.map(this.props.children,
     (child) => React.cloneElement(child, {this.props})*/}
         <NavigationF linksRoutes={linksRoutes} />
+        <postsGrid/>
       </div>
     );
   }

@@ -1,5 +1,6 @@
 import React from 'react';
 
+import postsGrid from './postsGrid';
 import Owner from './Owner';
 import Main from './components/Main';
 import {OwnerConnect, SingleConnect} from './components/App';
@@ -8,7 +9,6 @@ import Home from './home';
 import App from './components/App';
 import Tab from './Tab'
 import Single from './Single'
-import PhotoGrid from './PhotoGrid'
 
 
 
@@ -17,18 +17,23 @@ const mainLinksRoutes = [
   // {
   //   path: "/",
   //   component: Home,
-  //   name: "",
+  //   name: "Alquiler/Venta",
   //   exact: true
   // },
   {
-    path: "/owner",
-    component: Owner,
-    name: "Dueño directo"
+    path: "/main",
+    component: postsGrid,
+    name: "Todos"
   },
   {
-    path: "/agency",
-    component: Agency,
-    name: "Inmobiliaria"
+    path: "/sale",
+    component: postsGrid,
+    name: "Ventas"
+  },
+  {
+    path: "/rent",
+    component: postsGrid,
+    name: "Alquileres"
   },
   {
     path: "/view",
@@ -37,29 +42,29 @@ const mainLinksRoutes = [
   }
 ];
 
-const tabLinksRoutes = [
-  {
-    path: "/owner/PhotoGrid",
-    component: PhotoGrid,
-    name: "PhotoGrid",
-    title:"PhotoGrid"
-  },
-  {
-    path: "/owner/Tab",
-    component: Tab,
-    name: "Tab",
-    title:"Titulo"
-  },
-  {
-    path: "/owner/Tab",
-    component: Tab,
-    name: "Tab",
-    title:"Titulo"
-  }
-];
+// const tabLinksRoutes = [
+//   // {
+//   //   path: "/owner/PhotoGrid",
+//   //   component: PhotoGrid,
+//   //   name: "PhotoGrid",
+//   //   title:"PhotoGrid"
+//   // },
+//   {
+//     path: "/owner/Tab",
+//     component: Tab,
+//     name: "Tab",
+//     title:"Titulo"
+//   },
+//   {
+//     path: "/owner/Tab",
+//     component: Tab,
+//     name: "Tab",
+//     title:"Titulo"
+//   }
+// ];
 
 
 export {
-    mainLinksRoutes,
-    tabLinksRoutes
+    mainLinksRoutes
+    // tabLinksRoutes
 }
