@@ -2,7 +2,6 @@
 import { store } from '../Store.js'
 import { postsResponse } from "../Data/data";
 
-
 const postsData = {
     allPosts: postsResponse,
     currentPost: {}
@@ -10,22 +9,32 @@ const postsData = {
 
 
 const posts = (state = postsData, action) => {
-    // console.error("El post cambio");
-    // console.error(action);
+
     switch (action.type) {
         case 'VIEW_POST':
-            // console.error(action);
-            
-            // return action.id;
-            console.error(store.getState());
-            return state.currentPost = action.allPosts.find(product => product.id == action.post.id);
-            
+            return {...state,
+                currentPost: action.currentPost};
             break;
         default:
             return state
     }
-
-    return state;
 }
+
+// const setCurrentPost = (state = postsData.currentPost, action) => {
+
+//     switch (action.type) {
+//         case 'SET_POST':
+//             // console.error("El post cambio");
+//             // console.error(state);
+//             // console.error(action);
+//             return state.currentPost = action.currentPost;
+//             break;
+//         default:
+//             return state
+//     }
+// }
+
+
+
 
 export default posts;

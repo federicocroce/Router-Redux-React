@@ -53,7 +53,7 @@ import Photo from './Photo';
 const Owner = (props) => {
 
   // console.log(props);
-  console.error(props.posts);
+  // console.error(props);
   return (
     <div>
       <h1>OWNER</h1>

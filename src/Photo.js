@@ -84,20 +84,20 @@ import { viewPost } from './actions/actionsCreator';
 const Photo = (props) => {
 
   // console.log(props);
-  console.error("Photo");
-  console.error(props);
+  // console.error("Photo");
+  // console.error(props);
   return (
-    <div className="main-obj">
+    <div className="main-obj" >
       {/*<Link to={`/view/${props.object}`}>*/}
-      <NavLink to={'/view'}>
+      <NavLink to={'/view'} onClick={() => props.viewPost(props.object)}>
         <p>{props.object.likes}</p>
       </NavLink>
       {/*<Switch>*/}
-      <Route path="/view" component={Single}></Route>
+      {/*<Route path="/view" component={Single} ></Route>*/}
       {/*</Switch>*/}
 
 
-      <button onClick={() => props.viewPost(props)}> VIEW</button>
+      {/*<button onClick={() => props.viewPost(props.object)}> VIEW</button>*/}
 
     </div>
   );
@@ -108,38 +108,22 @@ const Photo = (props) => {
 * Si se especifica, el componente a suscribirse a las actualizaciones del store de Redux.
 */
 const mapStateToProps = (state) => {
+  // console.log("state");
   // console.log(state);
   return {
-    posts: state.currentPost
+    currentPost: state.posts.currentPost
   };
 }
 
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     onIncrement: () => {
-//       console.log("SUMA");
-//       dispatch({
-//         type: 'INCREMENT'
-//       })
-//     },
-//     onDecrement: () => {
-//       console.log("RESTA");
-//       dispatch({
-//         type: 'DECREMENT'
-//       })
-//     }
-//   };
-// };
 
 const mapDispatchToProps = dispatch => {
   return {
-    viewPost: (currentPost) => {
-      dispatch({
-        type: 'VIEW_POST'
-      })
+    viewPost(currentPost) {
+       dispatch(viewPost(currentPost));
     }
   };
 }
+
 
 /*
 * Dispatch de las acciones

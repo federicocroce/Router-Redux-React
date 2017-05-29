@@ -1,21 +1,46 @@
 import React from 'react';
 
-
-class Single extends React.Component {
-
-  constructor(props) {
-    super(props);
-  }
+import { connect } from "react-redux";
 
 
-  render() {
-
-    return (
-      <div>
-        <h1>Single</h1>
-      </div>
-    );
-  }
+const Single = (props) => {
+  console.error(props);
+  return (
+    <div>
+      <h1>Single</h1>
+      {JSON.stringify(props.currentPost)}
+    </div>
+  );
 }
 
-export default Single;
+
+const mapStateToProps = (state) => {
+  // console.log("state");
+  // console.log(state);
+  return {
+    currentPost: state.posts.currentPost
+  };
+}
+
+
+// const mapDispatchToProps = dispatch => {
+//   return {
+//     viewPost(currentPost) {
+//        dispatch(viewPost(currentPost));
+//     }
+//   };
+// }
+
+
+/*
+* Dispatch de las acciones
+*/
+
+/*
+* Acá se conecta el componente con redux
+*/
+// const { connect } = ReactRedux;
+export default connect(
+  mapStateToProps,
+  null
+)(Single);

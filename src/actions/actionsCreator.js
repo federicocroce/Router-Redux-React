@@ -14,11 +14,10 @@ export function increment(index){
 //     }
 // }
 
-const viewPost = (allPosts, post) =>{
+const viewPost = (currentPost) =>{
     return{
         type:'VIEW_POST',
-        allPosts, 
-        post
+        currentPost
     }
 }
 
