@@ -23,26 +23,26 @@ const posts = (state = postsData, action) => {
     }
 }
 
-const postsFilter = (state = postsData.allPosts, action) => {
-    // console.error(action);
-    switch (action.type) {
-        case 'SELL_POSTS':
-        return action.posts.filter(post => post.type == "sale")
-        // console.error("Sell");
-        // return {
-        //         ...state,
-        //         allPosts: action.posts.filter(post => post.type == "sale")
-        //     };
-            // return a
-            break;
-        case 'RENT_POSTS':
-        console.error(state);
-             return action.posts.filter(post => post.type == "rent")
-            break;
-        default:
-            return state
-    }
-}
+// const postsFilter = (state = postsData.allPosts, action) => {
+//     // console.error(action);
+//     switch (action.type) {
+//         case 'SELL_POSTS':
+//         return action.posts.filter(post => post.type == "sale")
+//         // console.error("Sell");
+//         // return {
+//         //         ...state,
+//         //         allPosts: action.posts.filter(post => post.type == "sale")
+//         //     };
+//             // return a
+//             break;
+//         case 'RENT_POSTS':
+//         console.error(state);
+//              return action.posts.filter(post => post.type == "rent")
+//             break;
+//         default:
+//             return state
+//     }
+// }
 
 // const sellPosts = (state = postsData, action) => {
 
@@ -89,4 +89,4 @@ const postsFilter = (state = postsData.allPosts, action) => {
 
 
 // export { posts, sellPosts, rentPosts };
-export { posts, postsFilter };
+export { posts };
