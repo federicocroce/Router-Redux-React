@@ -22,7 +22,7 @@
 // // }
 
 
-// const Photo = (props) => {
+// const Post = (props) => {
 
 //   // const post = 
 //   console.error(props);
@@ -63,13 +63,13 @@
 // }
 
 
-// export default connect(mapStateProps, mapDispatchToProps)(Photo);
+// export default connect(mapStateProps, mapDispatchToProps)(Post);
 
 
 
 // <button onClick={store.dispatch(viewPost)}> VIEW</button>
 
-// export default Photo;
+// export default Post;
 
 
 import React from 'react';
@@ -78,20 +78,22 @@ import { NavLink, Route, Switch } from 'react-router-dom';
 
 import { connect } from "react-redux";
 
-import Single from './Single';
+// import Single from './Single';
 import { viewPost } from './actions/actionsCreator';
 
-const Photo = (props) => {
+const Post = (props) => {
 
   // console.log(props);
   // console.error("Photo");
-  // console.error(props);
+  console.error(props.object.display_src);
   return (
-    <div className="main-obj" >
+    <NavLink className="main-obj" to={'/view'} onClick={() => props.viewPost(props.object)}>
+      <img src={props.object.display_src} alt="Smiley face" height="100" width="100"/>
       {/*<Link to={`/view/${props.object}`}>*/}
-      <NavLink to={'/view'} onClick={() => props.viewPost(props.object)}>
+
+      {/*<NavLink to={'/view'} onClick={() => props.viewPost(props.object)}>*/}
         <p>{props.object.likes}</p>        
-      </NavLink>
+      {/*</NavLink>*/}
       <p>{props.object.type}</p>
       {/*<Switch>*/}
       {/*<Route path="/view" component={Single} ></Route>*/}
@@ -100,7 +102,7 @@ const Photo = (props) => {
 
       {/*<button onClick={() => props.viewPost(props.object)}> VIEW</button>*/}
 
-    </div>
+    </NavLink>
   );
 
 }
@@ -137,4 +139,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Photo);
+)(Post);

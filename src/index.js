@@ -22,7 +22,7 @@ import Tab from './Tab';
 // import Main from './Main';
 import App from './components/App';
 import home from './home';
-import Single from './Single';
+// import Single from './Single';
 // import PhotoGrid from './PhotoGrid';
 
 

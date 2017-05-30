@@ -2,10 +2,25 @@ const postsResponse = [
     {
         "code": "1",
         "type": "sale",
-        "caption": "Fede 1",
+        "owner": false,
+        "title": "Av Belgrano 1759 1C",
         "likes": 40,
         "id": 1,
-        "display_src": "http://static.betazeta.com/www.fayerwayer.com/up/2013/09/google-plano-960x623.jpg"
+        "display_src": "http://static.betazeta.com/www.fayerwayer.com/up/2013/09/google-plano-960x623.jpg",
+        "detail": [
+            {
+                "key": "Comentario",
+                "value": "Fede"
+            },
+            {
+                "key": "Comentario",
+                "user": "Fede"
+            },
+            {
+                "text": "Comentario",
+                "user": "Fede"
+            }
+        ]
 
     },
     {

@@ -44,5 +44,5 @@ nav ul li {
 }
 
 
-.main-obj{width: 100px; height: 100px; color: red; background: lightskyblue; display: inline-block; margin: 20px;
+.main-obj{width: 100px; height: 100%; color: red; background: lightskyblue; display: inline-block; margin: 20px;
 }

@@ -5,9 +5,9 @@ import { Route, Link, Switch, IndexRoute } from 'react-router-dom';
 import { mainLinksRoutes as linksRoutes } from '../appRoutes.js'
 import NavigationF from '../NavigationF';
 
-import Single from '../Single';
+// import Single from '../Single';
 // import PhotoGrid from '../PhotoGrid';
-import Photo from '../Photo';
+// import Photo from '../Photo';
 
 class Main extends React.Component {
 

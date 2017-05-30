@@ -8,7 +8,7 @@ import Agency from './Agency';
 import Home from './home';
 import App from './components/App';
 import Tab from './Tab'
-import Single from './Single'
+import PostDetail from './PostDetail'
 
 
 
@@ -37,7 +37,7 @@ const mainLinksRoutes = [
   },
   {
     path: "/view",
-    component: Single,
+    component: PostDetail,
     name: ""
   }
 ];

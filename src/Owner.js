@@ -2,7 +2,7 @@ import React from 'react';
 
 import { connect } from "react-redux";
 
-import Photo from './Photo';
+import Post from './Post';
 
 const Owner = (props) => {
 
@@ -12,7 +12,7 @@ const Owner = (props) => {
     <div>
       <h1>Test Dueño Directo</h1>
       {props.posts.allPosts.map((object, index) =>
-           <Photo key={index} index={index} object={object} />
+           <Post key={index} index={index} object={object} />
       )}
     </div>
   );

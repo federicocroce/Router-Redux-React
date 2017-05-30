@@ -2,7 +2,7 @@ import React from 'react';
 
 import { connect } from "react-redux";
 
-import Photo from './Photo';
+import Post from './Post';
 
 // import { filterPosts } from './actions/actionsCreator';
 
@@ -47,7 +47,7 @@ const postsGrid = (props) => {
       <h1>{props.posts.title}</h1>
 
       {props.posts.postList.map((object, index) =>
-        <Photo key={index} index={index} object={object} />
+        <Post key={index} index={index} object={object} />
       )}
 
       {/*<button onClick={() => props.filterPosts(props.state.posts.allPosts, "SELL_POSTS")}> Ventas</button>

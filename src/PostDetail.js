@@ -3,11 +3,11 @@ import React from 'react';
 import { connect } from "react-redux";
 
 
-const Single = (props) => {
+const PostDetail = (props) => {
   console.error(props);
   return (
     <div>
-      <h1>Single</h1>
+      <h1>Post</h1>
       {JSON.stringify(props.currentPost)}
     </div>
   );
@@ -43,4 +43,4 @@ const mapStateToProps = (state) => {
 export default connect(
   mapStateToProps,
   null
-)(Single);
+)(PostDetail);
