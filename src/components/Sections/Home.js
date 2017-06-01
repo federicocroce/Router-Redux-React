@@ -1,13 +1,13 @@
 import React from 'react';
 import { Route, Router, Link, Switch, IndexRoute } from 'react-router-dom';
 
-import App from './components/App';
+// import App from './components/App';
 
-import { mainLinksRoutes as linksRoutes } from './appRoutes.js'
-import NavigationF from './NavigationF';
-import postsGrid from './postsGrid';
+import { mainLinksRoutes as linksRoutes } from '../Main/AppRoutes.js'
+import NavigationBar from '../Utilities/NavigationBar';
+import postsGrid from './PostsGrid';
 
-import Owner from './Owner';
+// import Owner from './Owner';
 
 class Home extends React.Component {
 
@@ -32,7 +32,7 @@ class Home extends React.Component {
 
         React.Children.map(this.props.children,
     (child) => React.cloneElement(child, {this.props})*/}
-        <NavigationF linksRoutes={linksRoutes} />
+        <NavigationBar linksRoutes={linksRoutes} />
         <postsGrid/>
       </div>
     );

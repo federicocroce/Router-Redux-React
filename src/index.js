@@ -7,21 +7,21 @@ import { ConnectedRouter, routerReducer, routerMiddleware } from "react-router-r
 import { createStore, applyMiddleware, combineReducers } from "redux";
 import { Route, Router, Link, Switch, IndexRoute } from 'react-router-dom';
 
-import { store, history } from './Store.js'
+import { store, history } from './components/Main/Store.js'
 
-import { mainLinksRoutes as linksRoutes } from './appRoutes.js'
-import NavigationF from './NavigationF';
+import { mainLinksRoutes as linksRoutes } from './components/Main/AppRoutes.js'
+import NavigationBar from './components/Utilities/NavigationBar';
 
 // import App from './App';
 // import Contact from './contact';
 
 
-import Tab from './Tab';
+// import Tab from './Tab';
 
 
 // import Main from './Main';
-import App from './components/App';
-import home from './home';
+// import App from './components/App';
+import Home from './components/Sections/Home';
 // import Single from './Single';
 // import PhotoGrid from './PhotoGrid';
 
@@ -30,7 +30,7 @@ ReactDOM.render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
       <div>
-        <Route path="/" component={home}></Route>
+        <Route path="/" component={Home}></Route>
         {/*<NavigationF linksRoutes={linksRoutes} />*/}
       </div>
 

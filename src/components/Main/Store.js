@@ -7,7 +7,7 @@ import {routerMiddleware } from "react-router-redux";
 // import { composeWithDevTools } from 'redux-devtools-extension';
 import createHistory from 'history/createBrowserHistory';
 
-import  registerReducer from "./reducers/index";
+import  reducer from "../../reducers/Index";
 // import {comments, posts} from "./Data/data"
 
 // const defaultStore = {
@@ -26,7 +26,7 @@ const middleware = routerMiddleware(history);
 
 // const reducers = combineReducers({ ...registerReducer, router: routerReducer });
 // const store = createStore(reducers, defaultStore);
-const store = createStore(registerReducer, applyMiddleware(middleware));
+const store = createStore(reducer, applyMiddleware(middleware));
 
 
 export {

@@ -1,14 +1,15 @@
 import React from 'react';
 
-import postsGrid from './postsGrid';
-import Owner from './Owner';
-import Main from './components/Main';
-import {OwnerConnect, SingleConnect} from './components/App';
-import Agency from './Agency';
-import Home from './home';
-import App from './components/App';
-import Tab from './Tab'
-import PostDetail from './PostDetail'
+import PostsGrid from '../Sections/PostsGrid';
+// import Owner from './Owner';
+// import Main from './components/Main';
+// import {OwnerConnect, SingleConnect} from './components/App';
+// import Agency from './Agency';
+import Home from '../Sections/Home';
+import NewPost from '../Sections/NewPost';
+// import App from './components/App';
+// import Tab from './Tab'
+import PostDetail from '../Sections/PostDetail'
 
 
 
@@ -22,18 +23,24 @@ const mainLinksRoutes = [
   // },
   {
     path: "/main",
-    component: postsGrid,
+    component: PostsGrid,
     name: "Todos"
   },
   {
     path: "/sale",
-    component: postsGrid,
+    component: PostsGrid,
     name: "Ventas"
   },
   {
     path: "/rent",
-    component: postsGrid,
+    component: PostsGrid,
     name: "Alquileres"
+  },
+  ,
+  {
+    path: "/new",
+    component: NewPost,
+    name: "Nuevo"
   },
   {
     path: "/view",

@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
 import { routerReducer } from "react-router-redux";
 
-import { posts, postsFilter } from './posts';
-import comments from './comments';
+import { posts, postsFilter } from './Posts';
+// import comments from './comments';
 
 
 // function currentPost(state = {}, action) {
@@ -29,7 +29,7 @@ const allReducers = {
     // currentPost,
     posts,
     postsFilter,
-    comments,
+    // comments,
     routing: routerReducer
 }
 
