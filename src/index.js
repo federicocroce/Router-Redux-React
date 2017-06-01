@@ -7,6 +7,9 @@ import { ConnectedRouter, routerReducer, routerMiddleware } from "react-router-r
 import { createStore, applyMiddleware, combineReducers } from "redux";
 import { Route, Router, Link, Switch, IndexRoute } from 'react-router-dom';
 
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+// import MyAwesomeReactComponent from './MyAwesomeReactComponent';
+
 import { store, history } from './components/Main/Store.js'
 
 import { mainLinksRoutes as linksRoutes } from './components/Main/AppRoutes.js'
@@ -27,15 +30,19 @@ import Home from './components/Sections/Home';
 
 
 ReactDOM.render(
-  <Provider store={store}>
-    <ConnectedRouter history={history}>
-      <div>
-        <Route path="/" component={Home}></Route>
-        {/*<NavigationF linksRoutes={linksRoutes} />*/}
-      </div>
+  <MuiThemeProvider>
+    <Provider store={store}>
+      <ConnectedRouter history={history}>
+        <div>
+          <Route path="/" component={Home}></Route>
+          {/*<NavigationF linksRoutes={linksRoutes} />*/}
+        </div>
 
-    </ConnectedRouter>
-  </Provider>,
+      </ConnectedRouter>
+    </Provider>
+    {/*<MyAwesomeReactComponent />*/}
+  </MuiThemeProvider>
+  ,
   document.getElementById('root')
 );
 

@@ -5,6 +5,7 @@ import { Route, Router, Link, Switch, IndexRoute } from 'react-router-dom';
 
 import { mainLinksRoutes as linksRoutes } from '../Main/AppRoutes.js'
 import NavigationBar from '../Utilities/NavigationBar';
+import RaisedButton from 'material-ui/RaisedButton';
 import postsGrid from './PostsGrid';
 
 // import Owner from './Owner';
@@ -33,6 +34,7 @@ class Home extends React.Component {
         React.Children.map(this.props.children,
     (child) => React.cloneElement(child, {this.props})*/}
         <NavigationBar linksRoutes={linksRoutes} />
+        <RaisedButton label="Default" />
         <postsGrid/>
       </div>
     );
